@@ -23,8 +23,7 @@ public class LoginActivity extends AppCompatActivity {
         Button loginbutton = (Button) findViewById(R.id.loginbutton);
         //cia istraukiamas elementas is vaizdo
 
-        final EditText usernametext = (EditText) findViewById(R.id.usernametext);
-        //edit text yra neapdirbtas formatas, todel isvedant reikia rasyti getText toString
+        final EditText usernametext = (EditText) findViewById(R.id.usernametext); //edit text yra neapdirbtas formatas, todel isvedant reikia rasyti getText toString
         final EditText passwordtext = (EditText) findViewById(R.id.passwordtext);
         loginbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,8 +40,8 @@ public class LoginActivity extends AppCompatActivity {
                    startActivity(goToSearchActivity);
                }
                else {//kai duomenys neatitinka sablono/reikalavimo
-                   usernametext.setError(getResources().getString(R.string.login_invalid_username));//cia taip prieinam prie susikurtu savo values, kaip su xml
-                   usernametext.requestFocus();//peles kursoriu sufokusuoja ties kuriuo yra klaida ir ismeta pranesima
+                   usernametext.setError(getResources().getString(R.string.login_invalid_username));
+                   usernametext.requestFocus();//sufokusuoja ties kuriuo yra klaida ir ismeta pranesima
 
                }
                Button registerbutton = (Button) findViewById(R.id.registerbutton);
